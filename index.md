@@ -7,7 +7,8 @@ Here, I will list some experience from the class EDS-124BR that I have gained th
 #### Week 1
    - This is my [Programming Explanation Video](https://youtu.be/LZBeHXEKtHs)
     
-#### Week 2
+#### Week 2 
+   - This is my [Do This Part 2 Explanation Video](https://youtu.be/GtMHDIxzUT0)
    
 #### Week 3
        
