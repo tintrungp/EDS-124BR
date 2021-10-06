@@ -1,3 +1,5 @@
+ <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+ 
 ## Hello I'm Tin-Trung Pham
 I am a Junior studying Computer Science at UCSD. This is my first teaching portfolio done using GitHub pages, so please be kind and understanding if there are any mistakes throughout the rest of the page.
 
