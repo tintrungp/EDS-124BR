@@ -11,6 +11,7 @@ Here, I will list some experience from the class EDS-124BR that I have gained th
     
 #### Week 2 
    - This is my [Do This Part 2 Explanation Video](https://youtu.be/GtMHDIxzUT0)
+   - This is my [Explained Quest Code Video](https://youtu.be/vhhPIVlk3qM)
    
 #### Week 3
        
