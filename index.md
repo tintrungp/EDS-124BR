@@ -15,6 +15,7 @@ Here, I will list some experience from the class EDS-124BR that I have gained th
    
 #### Week 3
    - This is my [Programming Explanation Video of Nested Repeates](https://youtu.be/NYYg1G-DfeI) 
+   - This is my [Programming Explanation Video of Events](https://youtu.be/sd-fxmnm9L8)
        
 #### Week 4
    
