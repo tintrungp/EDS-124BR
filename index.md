@@ -18,6 +18,7 @@ Here, I will list some experience from the class EDS-124BR that I have gained th
    - This is my [Programming Explanation Video of Events](https://youtu.be/sd-fxmnm9L8)
        
 #### Week 4
+   - This is my [Programming Explanation Video of Variables](https://youtu.be/0EeOU1QebR0)
    
 #### Week 5
     
