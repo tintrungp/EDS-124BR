@@ -21,7 +21,7 @@ Here, I will list some experience from the class EDS-124BR that I have gained th
    - This is my [Programming Explanation Video of Variables](https://youtu.be/0EeOU1QebR0)
    
 #### Week 5
-    
+   - This is my [Programming Explanation Video of Conditional Repeats](https://youtu.be/3QbYh_AEzHI)
 #### Week 6
     
 #### Week 7
