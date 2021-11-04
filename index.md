@@ -22,8 +22,10 @@ Here, I will list some experience from the class EDS-124BR that I have gained th
    
 #### Week 5
    - This is my [Programming Explanation Video of Conditional Repeats](https://youtu.be/3QbYh_AEzHI)
+
 #### Week 6
-    
+   - This is my [Programming Explanation Video of If Else Statements](https://youtu.be/uJmmqWw4Be4)
+
 #### Week 7
     
 #### Week 8
