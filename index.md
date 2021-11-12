@@ -27,6 +27,7 @@ Here, I will list some experience from the class EDS-124BR that I have gained th
    - This is my [Programming Explanation Video of If Else Statements](https://youtu.be/uJmmqWw4Be4)
 
 #### Week 7
+   - This is my [Programming Explanation Video of Nested If Else Statements](https://youtu.be/wKXUwkNigtI)
     
 #### Week 8
     
