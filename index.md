@@ -30,7 +30,8 @@ Here, I will list some experience from the class EDS-124BR that I have gained th
    - This is my [Programming Explanation Video of Nested If Else Statements](https://youtu.be/wKXUwkNigtI)
     
 #### Week 8
-    
+   - This is my [Programming Explanation Video of Compound Conditionals](https://youtu.be/iviCRzRpabk)
+   
 #### Week 9
     
 #### Week 10
