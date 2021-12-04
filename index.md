@@ -36,4 +36,4 @@ Here, I will list some experience from the class EDS-124BR that I have gained th
    - This is my [Programming Explanation Video of Abstraction](https://youtu.be/Y3D9C_xNISI)
     
 #### Week 10
-    
+   - This is my [Programming Explanation Video of Lists](https://youtu.be/-Z4YXDkriKY)
