@@ -69,10 +69,14 @@ module traffic_light_controller2(
 			next_state = YRRRR;
 		else begin								   // otherwise stay green
 		 	next_state = GRRRR;
-			if (~s)			                       // vacant countdown
+			if (~s)			        // vacant countdown
 			    	next_ctr4  = ctr4+1;
-			if  (sb)
-			  	next_ctr9 = ctr9+1;					   // occupied countdown
+			else
+				next_ctr4  = ctr4;
+			if  (sb)			// occupied countdown
+			  	next_ctr9 = ctr9+1;
+			else
+				next_ctr9 = ctr9;
 		end
 	end
 	YRRRR: next_state = ZRRRR;
@@ -96,12 +100,16 @@ module traffic_light_controller2(
 	RGRRR: begin 		                                 // EL+ES green
              if(ctr4 > 2 || ctr9 > 7)  					   // timeout if others want a turn
 			next_state = RYRRR;
-		else begin								   // otherwise stay green
+		else begin								   
 		 	next_state = RGRRR;
-			if (~e)			                       // vacant countdown
+			if (~e)			                      
 			    	next_ctr4  = ctr4+1;
+			else
+				next_ctr4  = ctr4;
 			if  (eb)
-			  	next_ctr9 = ctr9+1;					   // occupied countdown
+			  	next_ctr9 = ctr9+1;
+			else
+				next_ctr9 = ctr9;
 		end
 	end
 	RYRRR: next_state = RZRRR;
@@ -126,10 +134,14 @@ module traffic_light_controller2(
 			next_state = RRYRR;
 		else begin								   // otherwise stay green
 		 	next_state = RRGRR;
-			if (~w)			                       // vacant countdown
+			if (~w)			                     
 			    	next_ctr4  = ctr4+1;
+			else
+				next_ctr4  = ctr4;
 			if  (wb)
-			  	next_ctr9 = ctr9+1;					   // occupied countdown
+			  	next_ctr9 = ctr9+1;
+			else
+				next_ctr9 = ctr9;
 		end
 	end
 	RRYRR: next_state = RRZRR;
@@ -153,10 +165,14 @@ module traffic_light_controller2(
 			next_state = RRRYR;
 		else begin								   // otherwise stay green
 		 	next_state = RRRGR;
-			if (~l)			                       // vacant countdown
+			if (~l)			                       
 			    	next_ctr4  = ctr4+1;
+			else
+				next_ctr4  = ctr4;
 			if  (lb)
-			  	next_ctr9 = ctr9+1;					   // occupied countdown
+			  	next_ctr9 = ctr9+1;
+			else
+				next_ctr9 = ctr9;
 		end
 	end
 	RRRYR: next_state = RRRZR;
@@ -180,10 +196,14 @@ module traffic_light_controller2(
 			next_state = RRRRY;
 		else begin								   // otherwise stay green
 		 	next_state = RRRRG;
-			if (~n)			                       // vacant countdown
+			if (~n)			                      
 			    	next_ctr4  = ctr4+1;
+			else
+				next_ctr4  = ctr4;
 			if  (nb)
-			  	next_ctr9 = ctr9+1;					   // occupied countdown
+			  	next_ctr9 = ctr9+1;
+			else
+				next_ctr9 = ctr9;
 		end
 	end
 	RRRRY: next_state = RRRRZ;
