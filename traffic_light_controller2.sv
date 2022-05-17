@@ -64,48 +64,145 @@ module traffic_light_controller2(
 	next_ctr9 = 0;
 	case(present_state)
 /* ************* Fill in the case statements ************** */
-	  GRRRR: begin                           // ES+WS green 
-//	  	if( what condition??)  					   // timeout if others want a turn
-// 		  next_state = YRRRR;
-//	  	else if ( what condition ??)				   // timeout if my traffic goes away
-//	  	  next_state = YRRRR;
-//	  	else begin								   // otherwise stay green
-//	  	  next_state = GRRRR;
-//	      if ( what condition??)			                       // vacant countdown
-//		    next_ctr4  = ctr4+1;
-//       if  (what condition ??)
-//		  next_ctr9 = ctr9+1;					   // occupied countdown
-//	    end
-	  end
-	  YRRRR: next_state = ZRRRR;
+	GRRRR: begin                           // ES+WS green 
+		if(ctr4 > 2 || ctr9 > 7)  					   // timeout if others want a turn
+			next_state = YRRRR;
+		else begin								   // otherwise stay green
+		 	next_state = GRRRR;
+			if (~s)			                       // vacant countdown
+			    	next_ctr4  = ctr4+1;
+			if  (sb)
+			  	next_ctr9 = ctr9+1;					   // occupied countdown
+		end
+	end
+	YRRRR: next_state = ZRRRR;
+	ZRRRR: next_state = LRRRR;
 // fill in
-	  LRRRR: begin         // **fill in the blanks in the if ... else if ... chain
-/*	    if ()
-		  next_state = RGRRR;	                         // ES+EL green	     
-		else if ()
-		  next_state = RRGRR;							 // WS+WL green
-		else if ()
-		  next_state = RRRGR;							 // WL+EL green
-		else if ()
-		  next_state = RRRRG;							 // NS green
-        else if ()
-		  next_state = GRRRR;
+	LRRRR: begin         // **fill in the blanks in the if ... else if ... chain
+		if (e)
+		  	next_state = RGRRR;	                         // ES+EL green	     
+		else if (w)
+	  		next_state = RRGRR;							 // WS+WL green
+		else if (l)
+		  	next_state = RRRGR;							 // WL+EL green
+		else if (n)
+		  	next_state = RRRRG;							 // NS green
+		else if (s)
+		  	next_state = GRRRR;
 		else
-		  next_state = LRRRR;	   */
-      end
+		  	next_state = LRRRR;	   
+      	end
        
-	  RGRRR: begin 		                                 // EL+ES green
-              // ** fill in the guts **
-	  end
-	  RYRRR: next_state = RZRRR;
-	  RZRRR: next_state = RLRRR;
-	  RLRRR: begin
-             // ** fill in the guts **
-      end
+	RGRRR: begin 		                                 // EL+ES green
+             if(ctr4 > 2 || ctr9 > 7)  					   // timeout if others want a turn
+			next_state = RYRRR;
+		else begin								   // otherwise stay green
+		 	next_state = RGRRR;
+			if (~e)			                       // vacant countdown
+			    	next_ctr4  = ctr4+1;
+			if  (eb)
+			  	next_ctr9 = ctr9+1;					   // occupied countdown
+		end
+	end
+	RYRRR: next_state = RZRRR;
+	RZRRR: next_state = RLRRR;
+	RLRRR: begin
+	  	if (w)
+	  		next_state = RRGRR;							 // WS+WL green
+		else if (l)
+		  	next_state = RRRGR;							 // WL+EL green
+		else if (n)
+		  	next_state = RRRRG;							 // NS green
+		else if (s)
+		  	next_state = GRRRR;
+		else if (e)
+		  	next_state = RGRRR;
+		else
+		  	next_state = RLRRR;
+      	end
 
-	  RRGRR: begin 
-	        // ** fill in the guts, etc **
-	  end
+	RRGRR: begin 
+		if(ctr4 > 2 || ctr9 > 7)  					   // timeout if others want a turn
+			next_state = RRYRR;
+		else begin								   // otherwise stay green
+		 	next_state = RRGRR;
+			if (~w)			                       // vacant countdown
+			    	next_ctr4  = ctr4+1;
+			if  (wb)
+			  	next_ctr9 = ctr9+1;					   // occupied countdown
+		end
+	end
+	RRYRR: next_state = RRZRR;
+	RRZRR: next_state = RRLRR;
+	RRLRR: begin					 // WS+WL green
+		if (l)
+		  	next_state = RRRGR;							 // WL+EL green
+		else if (n)
+		  	next_state = RRRRG;							 // NS green
+		else if (s)
+		  	next_state = GRRRR;
+		else if (e)
+		  	next_state = RGRRR;
+		else if (w)
+	  		next_state = RRGRR;
+		else
+		  	next_state = RRLRR;
+      	end
+	RRRGR: begin 
+		if(ctr4 > 2 || ctr9 > 7)  					   // timeout if others want a turn
+			next_state = RRRYR;
+		else begin								   // otherwise stay green
+		 	next_state = RRRGR;
+			if (~l)			                       // vacant countdown
+			    	next_ctr4  = ctr4+1;
+			if  (lb)
+			  	next_ctr9 = ctr9+1;					   // occupied countdown
+		end
+	end
+	RRRYR: next_state = RRRZR;
+	RRRZR: next_state = RRRLR;
+	RRRLR: begin					 // WS+WL green									 // WL+EL green
+		if (n)
+		  	next_state = RRRRG;							 // NS green
+		else if (s)
+		  	next_state = GRRRR;
+		else if (e)
+		  	next_state = RGRRR;
+		else if (w)
+	  		next_state = RRGRR;
+		else if (l)
+		  	next_state = RRRGR;
+		else
+		  	next_state = RRRLR;
+      	end
+	RRRRG: begin 
+		if(ctr4 > 2 || ctr9 > 7)  					   // timeout if others want a turn
+			next_state = RRRRY;
+		else begin								   // otherwise stay green
+		 	next_state = RRRRG;
+			if (~n)			                       // vacant countdown
+			    	next_ctr4  = ctr4+1;
+			if  (nb)
+			  	next_ctr9 = ctr9+1;					   // occupied countdown
+		end
+	end
+	RRRRY: next_state = RRRRZ;
+	RRRRZ: next_state = RRRRL;
+	RRRRL: begin					 // WS+WL green									 // WL+EL green							 // NS green
+		if (s)
+		  	next_state = GRRRR;
+		else if (e)
+		  	next_state = RGRRR;
+		else if (w)
+	  		next_state = RRGRR;
+		else if (l)
+		  	next_state = RRRGR;
+		else if (n)
+		  	next_state = RRRRG;
+		else
+		  	next_state = RRRRL;
+      	end
+		
       // ** fill in the guts to complete 5 sets of R Y Z H progressions **
     endcase
   end
@@ -122,6 +219,37 @@ module traffic_light_controller2(
 			e_str_light = green;
 			w_str_light = green;
 		end
+		YRRRR,ZRRRR: begin
+			e_str_light = yellow;
+			w_str_light = yellow;
+		RGRRR:   begin 
+			e_str_light = green;
+			e_left_light = green;
+		end
+		RYRRR,RZRRR: begin
+			e_str_light = yellow;
+			e_left_light = yellow;
+		RRGRR:   begin 
+			w_str_light = green;
+			w_left_light = green;
+		end
+		RRYRR,RRZRR: begin
+			w_str_light = yellow;
+			w_left_light = yellow;
+		RRRGR:   begin 
+			e_left_light = green;
+			w_left_light = green;
+		end
+		RRRYR,RRRZR: begin
+			e_left_light = yellow;
+			w_left_light = yellow;
+		RRRRG:   begin 
+			ns_light = green;
+		end
+		RRRRY,RRRRZ: begin
+			ns_light = yellow;
+			
+		
 		// ** fill in the guts for all 5 directions -- just the greens and yellows **
 
       endcase
